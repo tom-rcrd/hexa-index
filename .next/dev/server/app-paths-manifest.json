@@ -1,0 +1,7 @@
+{
+  "/carte/page": "app/carte/page.js",
+  "/contribuer/page": "app/contribuer/page.js",
+  "/favoris/page": "app/favoris/page.js",
+  "/page": "app/page.js",
+  "/random/page": "app/random/page.js"
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/Nouveau%20dossier/01%20-%20Work/01%20-%20Projets/02%20-%20Web/03%20-%202025/hexa/hexa-app/app/page.jsx"],"sourcesContent":["import dynamic from 'next/dynamic'\r\n\r\nconst Map = dynamic(() => import('@/components/Map'), {\r\n  ssr: false\r\n})\r\n\r\nexport default function Page() {\r\n  return (\r\n    <main style={{ height: '100vh' }}>\r\n      <Map />\r\n    </main>\r\n  )\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;;;AAEA,MAAM,MAAM,IAAA,0KAAO,EAAC;;;;;;IAClB,KAAK;;AAGQ,SAAS;IACtB,qBACE,8OAAC;QAAK,OAAO;YAAE,QAAQ;QAAQ;kBAC7B,cAAA,8OAAC;;;;;;;;;;AAGP"}}]
+}

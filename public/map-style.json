@@ -1,0 +1,95 @@
+{
+  "version": 8,
+  "name": "Minimalist Light",
+  "sources": {
+    "openmaptiles": {
+      "type": "vector",
+      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=KlwCshSldobMOTmBY5rE"
+    }
+  },
+  "sprite": "https://openmaptiles.github.io/positron-gl-style/sprite",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=KlwCshSldobMOTmBY5rE",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {"background-color": "rgb(242,243,240)"}
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "water",
+      "paint": {"fill-color": "rgb(205,205,205)"}
+    },
+    {
+      "id": "highway_motorway",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "motorway"]],
+      "paint": {
+        "line-color": "rgb(213,213,213)",
+        "line-width": {"base": 1.4, "stops": [[5, 2], [20, 20]]}
+      }
+    },
+    {
+      "id": "highway_primary",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": ["all", ["==", "$type", "LineString"], ["==", "class", "primary"]],
+      "paint": {
+        "line-color": "rgb(234,234,234)",
+        "line-width": {"base": 1.2, "stops": [[6, 1.5], [20, 15]]}
+      }
+    },
+    {
+      "id": "boundary_country",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "boundary",
+      "filter": ["==", "admin_level", 2],
+      "paint": {
+        "line-color": "rgb(203,203,203)",
+        "line-width": {"base": 1.2, "stops": [[0, 1], [22, 6]]}
+      }
+    },
+    {
+      "id": "place_city",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "place",
+      "filter": ["all", ["==", "$type", "Point"], ["==", "class", "city"]],
+      "layout": {
+        "text-field": "{name:latin}",
+        "text-font": ["Metropolis Regular", "Noto Sans Regular"],
+        "text-size": {"stops": [[6, 12], [10, 18]]},
+        "text-anchor": "left"
+      },
+      "paint": {
+        "text-color": "rgb(117,129,145)",
+        "text-halo-color": "rgb(242,243,240)",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "place_capital",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "place",
+      "filter": ["all", ["==", "$type", "Point"], ["==", "capital", 2]],
+      "layout": {
+        "text-field": "{name:latin}",
+        "text-font": ["Metropolis Bold", "Noto Sans Bold"],
+        "text-size": {"stops": [[6, 14], [10, 22]]},
+        "text-anchor": "left"
+      },
+      "paint": {
+        "text-color": "rgb(117,129,145)",
+        "text-halo-color": "rgb(242,243,240)",
+        "text-halo-width": 1
+      }
+    }
+  ]
+}
