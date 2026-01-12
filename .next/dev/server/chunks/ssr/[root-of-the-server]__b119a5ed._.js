@@ -12,11 +12,11 @@ __turbopack_context__.s([
     "supabase",
     ()=>supabase
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$esm$2f$wrapper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@supabase/supabase-js/dist/esm/wrapper.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@supabase/supabase-js/dist/index.mjs [app-ssr] (ecmascript) <locals>");
 ;
 const supabaseUrl = ("TURBOPACK compile-time value", "https://ixwzqrwkcatbeqgdknbz.supabase.co");
 const supabaseAnonKey = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml4d3pxcndrY2F0YmVxZ2RrbmJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU0NzIwMzksImV4cCI6MjA4MTA0ODAzOX0.-zj6wnH_65mPTO5_jxY8S0waXRvOxXSa31TM9ohu2uU");
-const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$esm$2f$wrapper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createClient"])(supabaseUrl, supabaseAnonKey);
+const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createClient"])(supabaseUrl, supabaseAnonKey);
 }),
 "[project]/hooks/useAuth.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -2046,7 +2046,6 @@ __turbopack_context__.s([
     ()=>filtresStyles
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-// components/FiltresLieux.jsx - VERSION OPTIMISÉE
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$funnel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Filter$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/funnel.js [app-ssr] (ecmascript) <export default as Filter>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
@@ -2058,10 +2057,27 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$colors$2e$js__$5b$a
 ;
 function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
     const [showFilters, setShowFilters] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const filtersPanelRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     // Mémoïser le total de filtres actifs
     const totalFiltres = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>filtresActifs.types.length + filtresActifs.villes.length, [
         filtresActifs.types.length,
         filtresActifs.villes.length
+    ]);
+    // ✨ Détecter les clics en dehors du panneau de filtres
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const handleClickOutside = (event)=>{
+            if (filtersPanelRef.current && !filtersPanelRef.current.contains(event.target)) {
+                setShowFilters(false);
+            }
+        };
+        if (showFilters) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return ()=>{
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [
+        showFilters
     ]);
     const toggleFiltre = (type, value)=>{
         setFiltresActifs((prev)=>{
@@ -2084,12 +2100,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-white rounded-lg shadow-sm p-4 mb-6",
+        ref: filtersPanelRef,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: ()=>setShowFilters(!showFilters),
                 className: `
           w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all
-          ${showFilters ? 'bg-blue-600 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
+          ${showFilters ? 'bg-grey-200 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
         `,
                 "aria-expanded": showFilters,
                 "aria-controls": "filtres-panel",
@@ -2102,7 +2119,7 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 47,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2110,25 +2127,25 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                 children: "Filtres"
                             }, void 0, false, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 48,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this),
                             totalFiltres > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: `
                 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold
-                ${showFilters ? 'bg-white text-blue-600' : 'bg-blue-600 text-white'}
+                ${showFilters ? 'bg-white text-blue-600' : 'bg-grey-200 text-white'}
               `,
                                 "aria-label": `${totalFiltres} filtre${totalFiltres > 1 ? 's' : ''} actif${totalFiltres > 1 ? 's' : ''}`,
                                 children: totalFiltres
                             }, void 0, false, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 50,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 46,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2137,13 +2154,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                         children: "▼"
                     }, void 0, false, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 61,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/FiltresLieux.jsx",
-                lineNumber: 34,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             showFilters && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2162,19 +2179,19 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                     size: 16
                                 }, void 0, false, {
                                     fileName: "[project]/components/FiltresLieux.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 99,
                                     columnNumber: 17
                                 }, this),
                                 "Réinitialiser les filtres"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/FiltresLieux.jsx",
-                            lineNumber: 79,
+                            lineNumber: 95,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 78,
+                        lineNumber: 94,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2195,13 +2212,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 95,
+                                                lineNumber: 111,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 92,
+                                        lineNumber: 108,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2217,19 +2234,19 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 color: (0, __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$colors$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getColorForType"])(cat)
                                             }, cat, false, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 104,
+                                                lineNumber: 120,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 100,
+                                        lineNumber: 116,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 91,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2247,13 +2264,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 121,
+                                                lineNumber: 137,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 118,
+                                        lineNumber: 134,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2268,37 +2285,37 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 onClick: ()=>toggleFiltre('villes', ville.nom)
                                             }, ville.id || ville.nom, false, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 130,
+                                                lineNumber: 146,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 126,
+                                        lineNumber: 142,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 117,
+                                lineNumber: 133,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 89,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/FiltresLieux.jsx",
-                lineNumber: 70,
+                lineNumber: 86,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/FiltresLieux.jsx",
-        lineNumber: 33,
+        lineNumber: 49,
         columnNumber: 5
     }, this);
 }
@@ -2311,7 +2328,7 @@ const FiltreButton = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$projec
         onMouseLeave: ()=>setIsHovered(false),
         className: `
         px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200
-        ${isActive ? 'bg-blue-600 text-white shadow-md scale-105' : 'bg-white border border-gray-300 hover:border-gray-400 text-gray-700'}
+        ${isActive ? 'bg-grey-200 text-white shadow-md scale-105' : 'bg-white border border-gray-300 hover:border-gray-400 text-gray-700'}
       `,
         style: !isActive && isHovered && color ? {
             backgroundColor: color,
@@ -2322,7 +2339,7 @@ const FiltreButton = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$projec
         children: label
     }, void 0, false, {
         fileName: "[project]/components/FiltresLieux.jsx",
-        lineNumber: 152,
+        lineNumber: 168,
         columnNumber: 5
     }, this);
 });

@@ -12,6 +12,7 @@ import SidebarLieu from '@/components/SidebarLieu'
 import SidebarEditLieu from '@/components/SidebarEditLieu'
 import BarreAdmin from '@/components/BarreAdmin'
 import FiltresLieux from '@/components/FiltresLieux'
+import SearchBarLieux from '@/components/SearchBarLieux'
 
 const Map = dynamic(() => import('@/components/Map'), {
   ssr: false
@@ -29,6 +30,7 @@ export default function CartePage() {
   const [lieuToEdit, setLieuToEdit] = useState(null)
   const [showEditSidebar, setShowEditSidebar] = useState(false)
   const [filtresActifs, setFiltresActifs] = useState({ types: [], villes: [] })
+  const [validatedChips, setValidatedChips] = useState([]) // ✅ validatedChips au lieu de searchChips
 
   // 📝 Handlers
   const handleEdit = (lieu) => {
@@ -47,7 +49,6 @@ export default function CartePage() {
     try {
       await lieuxData.supprimerLieu(id)
 
-      // Vérifier si la ville a encore des lieux
       const lieuxRestants = lieuxData.lieux.filter(l => l.ville === ville && l.id !== id)
       if (lieuxRestants.length === 0) {
         await villesData.supprimerVille(ville)
@@ -64,12 +65,25 @@ export default function CartePage() {
     setLieuToEdit(null)
   }
 
-  // Filtrer les lieux
+  // ✨ Filtrer les lieux avec recherche + filtres
   const lieuxFiltres = lieuxData.lieux.filter(lieu => {
+    // Filtrage par recherche (chips)
+    if (validatedChips.length > 0) {
+      const matchSearch = validatedChips.every(word => {
+        const wordLower = word.toLowerCase()
+        return lieu.nom.toLowerCase().includes(wordLower) ||
+          lieu.types.some(type => type.toLowerCase().includes(wordLower)) ||
+          lieu.ville.toLowerCase().includes(wordLower)
+      })
+      if (!matchSearch) return false
+    }
+
+    // Filtrage par filtres actifs
     const matchTypes = filtresActifs.types.length === 0 || 
       filtresActifs.types.some(t => lieu.types.includes(t))
     const matchVilles = filtresActifs.villes.length === 0 || 
       filtresActifs.villes.includes(lieu.ville)
+    
     return matchTypes && matchVilles
   })
 
@@ -128,9 +142,21 @@ export default function CartePage() {
           </div>
         </div>
 
-        {/* Carte en plein écran */}
+        {/* Carte avec barre de recherche intégrée */}
         <div className="bg-white rounded-lg shadow-sm p-6">
-          <div style={{ height: 'calc(100vh - 350px)', minHeight: '600px' }}>
+          {/* ✨ Barre de recherche */}
+          <div className="mb-4">
+<SearchBarLieux 
+  lieux={lieuxData.lieux}
+  validatedChips={validatedChips}
+  setValidatedChips={setValidatedChips}
+  filtresActifs={filtresActifs} // ✨ Ajouter
+  setFiltresActifs={setFiltresActifs} // ✨ Ajouter
+/>
+          </div>
+
+          {/* Carte */}
+          <div style={{ height: 'calc(100vh - 450px)', minHeight: '600px' }}>
             <Map 
               lieux={lieuxFiltres} 
               villes={villesData.villes} 

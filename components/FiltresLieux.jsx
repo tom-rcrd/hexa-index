@@ -1,19 +1,35 @@
 'use client'
 
-// components/FiltresLieux.jsx - VERSION OPTIMISÉE
-
-import { useState, useMemo, memo } from 'react'
+import { useState, useMemo, memo, useRef, useEffect } from 'react'
 import { Filter, X } from 'lucide-react'
 import { getColorForType } from '@/utils/colors'
 
 function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
   const [showFilters, setShowFilters] = useState(false)
+  const filtersPanelRef = useRef(null)
 
   // Mémoïser le total de filtres actifs
   const totalFiltres = useMemo(
     () => filtresActifs.types.length + filtresActifs.villes.length,
     [filtresActifs.types.length, filtresActifs.villes.length]
   )
+
+  // ✨ Détecter les clics en dehors du panneau de filtres
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (filtersPanelRef.current && !filtersPanelRef.current.contains(event.target)) {
+        setShowFilters(false)
+      }
+    }
+
+    if (showFilters) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showFilters])
 
   const toggleFiltre = (type, value) => {
     setFiltresActifs(prev => {
@@ -30,13 +46,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
+    <div className="bg-white rounded-lg shadow-sm p-4 mb-6" ref={filtersPanelRef}>
       <button
         onClick={() => setShowFilters(!showFilters)}
         className={`
           w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all
           ${showFilters 
-            ? 'bg-blue-600 text-white shadow-md' 
+            ? 'bg-grey-200 text-white shadow-md' 
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }
         `}
@@ -50,7 +66,7 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
             <span 
               className={`
                 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold
-                ${showFilters ? 'bg-white text-blue-600' : 'bg-blue-600 text-white'}
+                ${showFilters ? 'bg-white text-blue-600' : 'bg-grey-200 text-white'}
               `}
               aria-label={`${totalFiltres} filtre${totalFiltres > 1 ? 's' : ''} actif${totalFiltres > 1 ? 's' : ''}`}
             >
@@ -156,7 +172,7 @@ const FiltreButton = memo(function FiltreButton({ label, isActive, onClick, colo
       className={`
         px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200
         ${isActive
-          ? 'bg-blue-600 text-white shadow-md scale-105'
+          ? 'bg-grey-200 text-white shadow-md scale-105'
           : 'bg-white border border-gray-300 hover:border-gray-400 text-gray-700'
         }
       `}

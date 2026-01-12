@@ -24,6 +24,8 @@ export default function Map({ lieux = [], villes = [], filtresActifs = { types: 
   const mapRef = useRef(null)
   const [mapLoaded, setMapLoaded] = useState(false)
   const popupRef = useRef(null)
+  const userHasInteracted = useRef(false) // ✨ Tracker l'interaction utilisateur
+  const isFirstLoad = useRef(true) // ✨ Tracker le premier chargement
 
   useEffect(() => {
     if (mapRef.current) return
@@ -40,6 +42,15 @@ export default function Map({ lieux = [], villes = [], filtresActifs = { types: 
     mapRef.current.on('load', () => {
       console.log('✅ Carte chargée')
       setMapLoaded(true)
+    })
+
+    // ✨ Détecter les interactions utilisateur
+    mapRef.current.on('dragstart', () => {
+      userHasInteracted.current = true
+    })
+
+    mapRef.current.on('zoomstart', () => {
+      userHasInteracted.current = true
     })
 
     return () => {
@@ -173,6 +184,16 @@ export default function Map({ lieux = [], villes = [], filtresActifs = { types: 
         const coordinates = e.features[0].geometry.coordinates.slice()
         const { ville, count, lieux: lieuxJson, types } = e.features[0].properties
 
+        // ✨ Marquer que l'utilisateur a interagi (clic sur une ville)
+        userHasInteracted.current = true
+
+        mapRef.current.flyTo({
+          center: coordinates,
+          zoom: 8,
+          duration: 2000,
+          essential: true
+        })
+
         const lieuxArray = JSON.parse(lieuxJson)
         const typesArray = JSON.parse(types)
 
@@ -191,8 +212,6 @@ export default function Map({ lieux = [], villes = [], filtresActifs = { types: 
                 nouveauBadge = `<span style="background-color: #10b981; color: white; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 3px; margin-left: 4px;">NOUVEAU</span>`
               }
             }
-
-
 
             return `<div 
               data-lieu-id="${l.id}"
@@ -268,8 +287,8 @@ export default function Map({ lieux = [], villes = [], filtresActifs = { types: 
       })
     }
 
-    // Ajuster la vue
-    if (geojsonData.features.length > 0) {
+    // ✨ Ajuster la vue SEULEMENT au premier chargement ou si l'utilisateur n'a pas interagi
+    if (geojsonData.features.length > 0 && isFirstLoad.current && !userHasInteracted.current) {
       const bounds = new maplibregl.LngLatBounds()
       geojsonData.features.forEach(feature => {
         bounds.extend(feature.geometry.coordinates)
@@ -279,8 +298,9 @@ export default function Map({ lieux = [], villes = [], filtresActifs = { types: 
         maxZoom: 10,
         duration: 1000
       })
+      isFirstLoad.current = false // ✨ Marquer que le premier chargement est terminé
     } else {
-      console.log('⚠️ Aucun lieu à afficher sur la carte')
+      console.log('⚠️ Aucun lieu à afficher sur la carte ou utilisateur a déjà interagi')
     }
 
   }, [lieux, villes, filtresActifs, mapLoaded, onLieuClick])

@@ -189,11 +189,11 @@ __turbopack_context__.s([
     "supabase",
     ()=>supabase
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$esm$2f$wrapper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@supabase/supabase-js/dist/esm/wrapper.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@supabase/supabase-js/dist/index.mjs [app-ssr] (ecmascript) <locals>");
 ;
 const supabaseUrl = ("TURBOPACK compile-time value", "https://ixwzqrwkcatbeqgdknbz.supabase.co");
 const supabaseAnonKey = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml4d3pxcndrY2F0YmVxZ2RrbmJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU0NzIwMzksImV4cCI6MjA4MTA0ODAzOX0.-zj6wnH_65mPTO5_jxY8S0waXRvOxXSa31TM9ohu2uU");
-const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$esm$2f$wrapper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createClient"])(supabaseUrl, supabaseAnonKey);
+const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createClient"])(supabaseUrl, supabaseAnonKey);
 }),
 "[project]/components/PartagerFavoris.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -833,6 +833,7 @@ __turbopack_context__.s([
     ()=>SidebarLieu
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/globe.js [app-ssr] (ecmascript) <export default as Globe>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/instagram.js [app-ssr] (ecmascript) <export default as Instagram>");
@@ -846,9 +847,32 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$helper$2e$js__$5b$a
 ;
 ;
 ;
+;
 function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
+    const sidebarRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // ✨ Détecter les clics en dehors de la sidebar
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (!lieu) return;
+        const handleClickOutside = (event)=>{
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                onClose();
+            }
+        };
+        // Petit délai pour éviter que le clic qui ouvre la sidebar la ferme immédiatement
+        const timeoutId = setTimeout(()=>{
+            document.addEventListener('mousedown', handleClickOutside);
+        }, 100);
+        return ()=>{
+            clearTimeout(timeoutId);
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [
+        lieu,
+        onClose
+    ]);
     if (!lieu) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        ref: sidebarRef,
         className: "fixed right-0 top-0 h-full w-[90vw] max-w-[400px] bg-white shadow-2xl z-50 overflow-y-auto animate-slide-in",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "p-6",
@@ -867,7 +891,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                             children: lieu.nom
                                         }, void 0, false, {
                                             fileName: "[project]/components/SidebarLieu.jsx",
-                                            lineNumber: 17,
+                                            lineNumber: 44,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$BoutonFavori$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -875,7 +899,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                             size: 24
                                         }, void 0, false, {
                                             fileName: "[project]/components/SidebarLieu.jsx",
-                                            lineNumber: 18,
+                                            lineNumber: 45,
                                             columnNumber: 15
                                         }, this),
                                         (0, __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$helper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["isNew"])(lieu.created_at) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -883,13 +907,13 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                             children: "NOUVEAU"
                                         }, void 0, false, {
                                             fileName: "[project]/components/SidebarLieu.jsx",
-                                            lineNumber: 20,
+                                            lineNumber: 47,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 16,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -903,12 +927,12 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                             children: type
                                         }, type, false, {
                                             fileName: "[project]/components/SidebarLieu.jsx",
-                                            lineNumber: 27,
+                                            lineNumber: 54,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 25,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -919,13 +943,13 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 63,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 15,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -935,18 +959,18 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                 size: 24
                             }, void 0, false, {
                                 fileName: "[project]/components/SidebarLieu.jsx",
-                                lineNumber: 42,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 38,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/SidebarLieu.jsx",
-                    lineNumber: 14,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this),
                 lieu.description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -957,7 +981,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                             children: "Description"
                         }, void 0, false, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 49,
+                            lineNumber: 76,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -965,13 +989,13 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                             children: lieu.description
                         }, void 0, false, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 50,
+                            lineNumber: 77,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/SidebarLieu.jsx",
-                    lineNumber: 48,
+                    lineNumber: 75,
                     columnNumber: 11
                 }, this),
                 (lieu.website || lieu.instagram) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -988,7 +1012,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                     className: "text-blue-600 flex-shrink-0"
                                 }, void 0, false, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 64,
+                                    lineNumber: 91,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -996,7 +1020,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                     children: "Voir le site web"
                                 }, void 0, false, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 65,
+                                    lineNumber: 92,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
@@ -1004,13 +1028,13 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                     className: "text-gray-400 ml-auto flex-shrink-0"
                                 }, void 0, false, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 66,
+                                    lineNumber: 93,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 58,
+                            lineNumber: 85,
                             columnNumber: 15
                         }, this),
                         lieu.instagram && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1024,7 +1048,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                     className: "text-pink-600 flex-shrink-0"
                                 }, void 0, false, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 77,
+                                    lineNumber: 104,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1032,7 +1056,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                     children: "Voir sur Instagram"
                                 }, void 0, false, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 78,
+                                    lineNumber: 105,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
@@ -1040,19 +1064,19 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                                     className: "text-gray-400 ml-auto flex-shrink-0"
                                 }, void 0, false, {
                                     fileName: "[project]/components/SidebarLieu.jsx",
-                                    lineNumber: 79,
+                                    lineNumber: 106,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 71,
+                            lineNumber: 98,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/SidebarLieu.jsx",
-                    lineNumber: 56,
+                    lineNumber: 83,
                     columnNumber: 11
                 }, this),
                 isAdmin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1067,7 +1091,7 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                             children: "Modifier"
                         }, void 0, false, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 88,
+                            lineNumber: 115,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1079,24 +1103,24 @@ function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
                             children: "Supprimer"
                         }, void 0, false, {
                             fileName: "[project]/components/SidebarLieu.jsx",
-                            lineNumber: 97,
+                            lineNumber: 124,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/SidebarLieu.jsx",
-                    lineNumber: 87,
+                    lineNumber: 114,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/SidebarLieu.jsx",
-            lineNumber: 13,
+            lineNumber: 40,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/SidebarLieu.jsx",
-        lineNumber: 12,
+        lineNumber: 36,
         columnNumber: 5
     }, this);
 }

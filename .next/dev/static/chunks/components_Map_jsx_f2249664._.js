@@ -52,6 +52,10 @@ function Map({ lieux = [], villes = [], filtresActifs = {
     const mapRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [mapLoaded, setMapLoaded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const popupRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const userHasInteracted = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(false) // ✨ Tracker l'interaction utilisateur
+    ;
+    const isFirstLoad = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(true) // ✨ Tracker le premier chargement
+    ;
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Map.useEffect": ()=>{
             if (mapRef.current) return;
@@ -69,6 +73,17 @@ function Map({ lieux = [], villes = [], filtresActifs = {
                 "Map.useEffect": ()=>{
                     console.log('✅ Carte chargée');
                     setMapLoaded(true);
+                }
+            }["Map.useEffect"]);
+            // ✨ Détecter les interactions utilisateur
+            mapRef.current.on('dragstart', {
+                "Map.useEffect": ()=>{
+                    userHasInteracted.current = true;
+                }
+            }["Map.useEffect"]);
+            mapRef.current.on('zoomstart', {
+                "Map.useEffect": ()=>{
+                    userHasInteracted.current = true;
                 }
             }["Map.useEffect"]);
             return ({
@@ -240,6 +255,14 @@ function Map({ lieux = [], villes = [], filtresActifs = {
                     "Map.useEffect": (e)=>{
                         const coordinates = e.features[0].geometry.coordinates.slice();
                         const { ville, count, lieux: lieuxJson, types } = e.features[0].properties;
+                        // ✨ Marquer que l'utilisateur a interagi (clic sur une ville)
+                        userHasInteracted.current = true;
+                        mapRef.current.flyTo({
+                            center: coordinates,
+                            zoom: 8,
+                            duration: 2000,
+                            essential: true
+                        });
                         const lieuxArray = JSON.parse(lieuxJson);
                         const typesArray = JSON.parse(types);
                         const lieuxHTML = lieuxArray.map({
@@ -336,8 +359,8 @@ function Map({ lieux = [], villes = [], filtresActifs = {
                     }
                 }["Map.useEffect"]);
             }
-            // Ajuster la vue
-            if (geojsonData.features.length > 0) {
+            // ✨ Ajuster la vue SEULEMENT au premier chargement ou si l'utilisateur n'a pas interagi
+            if (geojsonData.features.length > 0 && isFirstLoad.current && !userHasInteracted.current) {
                 const bounds = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$maplibre$2d$gl$2f$dist$2f$maplibre$2d$gl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].LngLatBounds();
                 geojsonData.features.forEach({
                     "Map.useEffect": (feature)=>{
@@ -349,8 +372,9 @@ function Map({ lieux = [], villes = [], filtresActifs = {
                     maxZoom: 10,
                     duration: 1000
                 });
+                isFirstLoad.current = false; // ✨ Marquer que le premier chargement est terminé
             } else {
-                console.log('⚠️ Aucun lieu à afficher sur la carte');
+                console.log('⚠️ Aucun lieu à afficher sur la carte ou utilisateur a déjà interagi');
             }
         }
     }["Map.useEffect"], [
@@ -368,11 +392,11 @@ function Map({ lieux = [], villes = [], filtresActifs = {
         }
     }, void 0, false, {
         fileName: "[project]/components/Map.jsx",
-        lineNumber: 289,
+        lineNumber: 309,
         columnNumber: 5
     }, this);
 }
-_s(Map, "2Kn+KDSZGXtWaLIEs+6z75LUGDQ=");
+_s(Map, "t/ZLDw3hBC1wgaYfhAmgynB+iJE=");
 _c = Map;
 var _c;
 __turbopack_context__.k.register(_c, "Map");

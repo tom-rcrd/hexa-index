@@ -6,11 +6,11 @@ __turbopack_context__.s([
     "supabase",
     ()=>supabase
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$esm$2f$wrapper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@supabase/supabase-js/dist/esm/wrapper.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@supabase/supabase-js/dist/index.mjs [app-ssr] (ecmascript) <locals>");
 ;
 const supabaseUrl = ("TURBOPACK compile-time value", "https://ixwzqrwkcatbeqgdknbz.supabase.co");
 const supabaseAnonKey = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml4d3pxcndrY2F0YmVxZ2RrbmJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU0NzIwMzksImV4cCI6MjA4MTA0ODAzOX0.-zj6wnH_65mPTO5_jxY8S0waXRvOxXSa31TM9ohu2uU");
-const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$esm$2f$wrapper$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createClient"])(supabaseUrl, supabaseAnonKey);
+const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createClient"])(supabaseUrl, supabaseAnonKey);
 }),
 "[project]/hooks/useAuth.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -2046,7 +2046,6 @@ __turbopack_context__.s([
     ()=>filtresStyles
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-// components/FiltresLieux.jsx - VERSION OPTIMISÉE
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$funnel$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Filter$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/funnel.js [app-ssr] (ecmascript) <export default as Filter>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
@@ -2058,10 +2057,27 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$colors$2e$js__$5b$a
 ;
 function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
     const [showFilters, setShowFilters] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const filtersPanelRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     // Mémoïser le total de filtres actifs
     const totalFiltres = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>filtresActifs.types.length + filtresActifs.villes.length, [
         filtresActifs.types.length,
         filtresActifs.villes.length
+    ]);
+    // ✨ Détecter les clics en dehors du panneau de filtres
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const handleClickOutside = (event)=>{
+            if (filtersPanelRef.current && !filtersPanelRef.current.contains(event.target)) {
+                setShowFilters(false);
+            }
+        };
+        if (showFilters) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return ()=>{
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [
+        showFilters
     ]);
     const toggleFiltre = (type, value)=>{
         setFiltresActifs((prev)=>{
@@ -2084,12 +2100,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-white rounded-lg shadow-sm p-4 mb-6",
+        ref: filtersPanelRef,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: ()=>setShowFilters(!showFilters),
                 className: `
           w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all
-          ${showFilters ? 'bg-blue-600 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
+          ${showFilters ? 'bg-grey-200 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
         `,
                 "aria-expanded": showFilters,
                 "aria-controls": "filtres-panel",
@@ -2102,7 +2119,7 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 47,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2110,25 +2127,25 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                 children: "Filtres"
                             }, void 0, false, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 48,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this),
                             totalFiltres > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: `
                 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold
-                ${showFilters ? 'bg-white text-blue-600' : 'bg-blue-600 text-white'}
+                ${showFilters ? 'bg-white text-blue-600' : 'bg-grey-200 text-white'}
               `,
                                 "aria-label": `${totalFiltres} filtre${totalFiltres > 1 ? 's' : ''} actif${totalFiltres > 1 ? 's' : ''}`,
                                 children: totalFiltres
                             }, void 0, false, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 50,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 46,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2137,13 +2154,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                         children: "▼"
                     }, void 0, false, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 61,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/FiltresLieux.jsx",
-                lineNumber: 34,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             showFilters && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2162,19 +2179,19 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                     size: 16
                                 }, void 0, false, {
                                     fileName: "[project]/components/FiltresLieux.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 99,
                                     columnNumber: 17
                                 }, this),
                                 "Réinitialiser les filtres"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/FiltresLieux.jsx",
-                            lineNumber: 79,
+                            lineNumber: 95,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 78,
+                        lineNumber: 94,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2195,13 +2212,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 95,
+                                                lineNumber: 111,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 92,
+                                        lineNumber: 108,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2217,19 +2234,19 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 color: (0, __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$colors$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getColorForType"])(cat)
                                             }, cat, false, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 104,
+                                                lineNumber: 120,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 100,
+                                        lineNumber: 116,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 91,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2247,13 +2264,13 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 121,
+                                                lineNumber: 137,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 118,
+                                        lineNumber: 134,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2268,37 +2285,37 @@ function FiltresLieux({ categories, villes, filtresActifs, setFiltresActifs }) {
                                                 onClick: ()=>toggleFiltre('villes', ville.nom)
                                             }, ville.id || ville.nom, false, {
                                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                                lineNumber: 130,
+                                                lineNumber: 146,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/components/FiltresLieux.jsx",
-                                        lineNumber: 126,
+                                        lineNumber: 142,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/FiltresLieux.jsx",
-                                lineNumber: 117,
+                                lineNumber: 133,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/FiltresLieux.jsx",
-                        lineNumber: 89,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/FiltresLieux.jsx",
-                lineNumber: 70,
+                lineNumber: 86,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/FiltresLieux.jsx",
-        lineNumber: 33,
+        lineNumber: 49,
         columnNumber: 5
     }, this);
 }
@@ -2311,7 +2328,7 @@ const FiltreButton = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$projec
         onMouseLeave: ()=>setIsHovered(false),
         className: `
         px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200
-        ${isActive ? 'bg-blue-600 text-white shadow-md scale-105' : 'bg-white border border-gray-300 hover:border-gray-400 text-gray-700'}
+        ${isActive ? 'bg-grey-200 text-white shadow-md scale-105' : 'bg-white border border-gray-300 hover:border-gray-400 text-gray-700'}
       `,
         style: !isActive && isHovered && color ? {
             backgroundColor: color,
@@ -2322,7 +2339,7 @@ const FiltreButton = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$projec
         children: label
     }, void 0, false, {
         fileName: "[project]/components/FiltresLieux.jsx",
-        lineNumber: 152,
+        lineNumber: 168,
         columnNumber: 5
     }, this);
 });
@@ -2359,6 +2376,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$up$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowUpDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/arrow-up-down.js [app-ssr] (ecmascript) <export default as ArrowUpDown>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$up$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowUp$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/arrow-up.js [app-ssr] (ecmascript) <export default as ArrowUp>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/arrow-down.js [app-ssr] (ecmascript) <export default as ArrowDown>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$BoutonFavori$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/BoutonFavori.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$utils$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/utils/utils.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$helper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/utils/helper.js [app-ssr] (ecmascript)");
@@ -2370,22 +2388,306 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$helper$2e$js__$5b$a
 ;
 ;
 function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDelete }) {
-    const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [currentInput, setCurrentInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [validatedChips, setValidatedChips] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [sortConfig, setSortConfig] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
         key: null,
         direction: 'asc'
     });
+    const [showSuggestions, setShowSuggestions] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [selectedSuggestionIndex, setSelectedSuggestionIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const inputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const suggestionsRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // ✨ Détecter les préfixes communs dans la base de données
+    const commonPrefixes = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        const allVilles = [
+            ...new Set(lieux.map((l)=>l.ville))
+        ];
+        const allTypes = [
+            ...new Set(lieux.flatMap((l)=>l.types))
+        ];
+        const allNoms = lieux.map((l)=>l.nom);
+        const allTerms = [
+            ...allVilles,
+            ...allTypes,
+            ...allNoms
+        ];
+        const firstWords = {};
+        allTerms.forEach((term)=>{
+            const words = term.split(/[\s\-]+/);
+            if (words.length > 1) {
+                const firstWord = words[0].toLowerCase();
+                firstWords[firstWord] = (firstWords[firstWord] || 0) + 1;
+            }
+        });
+        return Object.keys(firstWords).filter((word)=>firstWords[word] > 1);
+    }, [
+        lieux
+    ]);
+    // ✨ Générer les suggestions basées sur l'input actuel
+    const suggestions = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        if (!currentInput.trim() || currentInput.trim().length < 2) return [];
+        const inputLower = currentInput.trim().toLowerCase();
+        const allVilles = [
+            ...new Set(lieux.map((l)=>l.ville))
+        ];
+        const allTypes = [
+            ...new Set(lieux.flatMap((l)=>l.types))
+        ];
+        const allNoms = [
+            ...new Set(lieux.map((l)=>l.nom))
+        ];
+        const matches = [];
+        // Chercher dans les types
+        allTypes.forEach((type)=>{
+            if (type.toLowerCase().includes(inputLower) && !validatedChips.includes(type)) {
+                matches.push({
+                    value: type,
+                    type: 'type',
+                    color: (0, __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$utils$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getColorForType"])(type),
+                    priority: type.toLowerCase().startsWith(inputLower) ? 0 : 1
+                });
+            }
+        });
+        // Chercher dans les villes
+        allVilles.forEach((ville)=>{
+            if (ville.toLowerCase().includes(inputLower) && !validatedChips.includes(ville)) {
+                matches.push({
+                    value: ville,
+                    type: 'ville',
+                    color: '#60A5FA',
+                    priority: ville.toLowerCase().startsWith(inputLower) ? 0 : 1
+                });
+            }
+        });
+        // Chercher dans les noms
+        allNoms.forEach((nom)=>{
+            if (nom.toLowerCase().includes(inputLower) && !validatedChips.includes(nom)) {
+                matches.push({
+                    value: nom,
+                    type: 'lieu',
+                    color: '#34D399',
+                    priority: nom.toLowerCase().startsWith(inputLower) ? 0 : 1
+                });
+            }
+        });
+        // Trier : priorité aux matches qui commencent par l'input, puis alphabétique
+        return matches.sort((a, b)=>{
+            if (a.priority !== b.priority) return a.priority - b.priority;
+            return a.value.localeCompare(b.value);
+        }).slice(0, 8) // Limiter à 8 suggestions max
+        ;
+    }, [
+        currentInput,
+        lieux,
+        validatedChips
+    ]);
+    // ✨ Analyser les chips validés avec matching strict
+    const chipsAnalysis = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        if (validatedChips.length === 0) return [];
+        const allVilles = [
+            ...new Set(lieux.map((l)=>l.ville))
+        ];
+        const allTypes = [
+            ...new Set(lieux.flatMap((l)=>l.types))
+        ];
+        return validatedChips.map((word)=>{
+            const wordLower = word.toLowerCase();
+            const matchingType = allTypes.find((type)=>{
+                const typeLower = type.toLowerCase();
+                const typeWords = typeLower.split(/[\s\/\-]+/);
+                if (typeLower === wordLower) return true;
+                if (typeWords.length === 1) {
+                    return typeWords[0] === wordLower;
+                } else {
+                    return typeWords.some((part)=>part === wordLower);
+                }
+            });
+            if (matchingType) {
+                return {
+                    word: matchingType,
+                    type: 'type',
+                    color: (0, __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$utils$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getColorForType"])(matchingType)
+                };
+            }
+            const matchingVille = allVilles.find((v)=>{
+                const villeLower = v.toLowerCase();
+                const villeWords = villeLower.split(/[\s\-]+/);
+                if (villeLower === wordLower) return true;
+                if (villeWords.length > 1 && villeWords[0] === wordLower) {
+                    return false;
+                }
+                return villeWords.some((part)=>part === wordLower);
+            });
+            if (matchingVille) {
+                return {
+                    word: matchingVille,
+                    type: 'ville',
+                    color: '#60A5FA'
+                };
+            }
+            const matchingLieu = lieux.find((l)=>{
+                const nomLower = l.nom.toLowerCase();
+                const nomWords = nomLower.split(/[\s\-]+/);
+                if (nomLower === wordLower) return true;
+                if (nomWords.length > 1 && nomWords[0] === wordLower) {
+                    return false;
+                }
+                return nomWords.some((part)=>part === wordLower);
+            });
+            if (matchingLieu) {
+                return {
+                    word: word,
+                    type: 'lieu',
+                    color: '#34D399'
+                };
+            }
+            return {
+                word: word,
+                type: 'unknown',
+                color: '#E5E7EB'
+            };
+        });
+    }, [
+        validatedChips,
+        lieux
+    ]);
+    // ✨ Vérifier si un mot est un préfixe incomplet
+    const isIncompletePrefix = (word)=>{
+        const wordLower = word.toLowerCase();
+        if (commonPrefixes.includes(wordLower)) {
+            const allVilles = [
+                ...new Set(lieux.map((l)=>l.ville))
+            ];
+            const allTypes = [
+                ...new Set(lieux.flatMap((l)=>l.types))
+            ];
+            const allNoms = lieux.map((l)=>l.nom);
+            const hasMultiWordTerms = [
+                ...allVilles,
+                ...allTypes,
+                ...allNoms
+            ].some((term)=>{
+                const words = term.toLowerCase().split(/[\s\-]+/);
+                return words.length > 1 && words[0] === wordLower;
+            });
+            return hasMultiWordTerms;
+        }
+        return false;
+    };
+    // ✨ Valider une suggestion ou le texte actuel
+    const validateChip = (value = null)=>{
+        const chipValue = value || currentInput.trim();
+        if (chipValue && !validatedChips.includes(chipValue)) {
+            setValidatedChips([
+                ...validatedChips,
+                chipValue
+            ]);
+        }
+        setCurrentInput('');
+        setShowSuggestions(false);
+        setSelectedSuggestionIndex(0);
+        inputRef.current?.focus();
+    };
+    // ✨ Gérer la validation d'un chip avec autocomplete
+    const handleKeyDown = (e)=>{
+        // Navigation dans les suggestions
+        if (showSuggestions && suggestions.length > 0) {
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                setSelectedSuggestionIndex((prev)=>prev < suggestions.length - 1 ? prev + 1 : prev);
+                return;
+            }
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                setSelectedSuggestionIndex((prev)=>prev > 0 ? prev - 1 : 0);
+                return;
+            }
+            if (e.key === 'Enter' || e.key === 'Tab') {
+                e.preventDefault();
+                validateChip(suggestions[selectedSuggestionIndex].value);
+                return;
+            }
+            if (e.key === 'Escape') {
+                setShowSuggestions(false);
+                setSelectedSuggestionIndex(0);
+                return;
+            }
+        }
+        // Validation normale
+        if ((e.key === ' ' || e.key === 'Enter' || e.key === 'Tab') && currentInput.trim()) {
+            const word = currentInput.trim();
+            // ✨ Tab avec suggestions : prendre la première suggestion
+            if (e.key === 'Tab' && suggestions.length > 0) {
+                e.preventDefault();
+                validateChip(suggestions[0].value);
+                return;
+            }
+            // Si c'est un préfixe incomplet avec espace, laisser continuer
+            if (e.key === ' ' && isIncompletePrefix(word)) {
+                return;
+            }
+            if (e.key === 'Tab' || e.key === 'Enter') {
+                e.preventDefault();
+            }
+            if (isIncompletePrefix(word)) {
+                return;
+            }
+            e.preventDefault();
+            validateChip();
+        } else if (e.key === 'Backspace' && !currentInput && validatedChips.length > 0) {
+            e.preventDefault();
+            setValidatedChips(validatedChips.slice(0, -1));
+        }
+    };
+    // Afficher les suggestions quand on tape
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (currentInput.trim().length >= 2 && suggestions.length > 0) {
+            setShowSuggestions(true);
+            setSelectedSuggestionIndex(0);
+        } else {
+            setShowSuggestions(false);
+        }
+    }, [
+        currentInput,
+        suggestions.length
+    ]);
+    // Cacher les suggestions au clic extérieur
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const handleClickOutside = (event)=>{
+            if (suggestionsRef.current && !suggestionsRef.current.contains(event.target) && inputRef.current && !inputRef.current.contains(event.target)) {
+                setShowSuggestions(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return ()=>document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
     // Filtrer les lieux
     const lieuxFiltres = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         return lieux.filter((lieu)=>{
-            const matchSearch = lieu.nom.toLowerCase().includes(searchTerm.toLowerCase());
+            const allSearchTerms = [
+                ...validatedChips
+            ];
+            if (currentInput.trim()) {
+                allSearchTerms.push(currentInput.trim());
+            }
+            if (allSearchTerms.length === 0) {
+                const matchTypes = filtresActifs.types.length === 0 || filtresActifs.types.some((t)=>lieu.types.includes(t));
+                const matchVilles = filtresActifs.villes.length === 0 || filtresActifs.villes.includes(lieu.ville);
+                return matchTypes && matchVilles;
+            }
+            const matchSearch = allSearchTerms.every((word)=>{
+                const wordLower = word.toLowerCase();
+                return lieu.nom.toLowerCase().includes(wordLower) || lieu.types.some((type)=>type.toLowerCase().includes(wordLower)) || lieu.ville.toLowerCase().includes(wordLower);
+            });
             const matchTypes = filtresActifs.types.length === 0 || filtresActifs.types.some((t)=>lieu.types.includes(t));
             const matchVilles = filtresActifs.villes.length === 0 || filtresActifs.villes.includes(lieu.ville);
             return matchSearch && matchTypes && matchVilles;
         });
     }, [
         lieux,
-        searchTerm,
+        currentInput,
+        validatedChips,
         filtresActifs
     ]);
     // Trier les lieux
@@ -2430,7 +2732,7 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                 className: "text-gray-400"
             }, void 0, false, {
                 fileName: "[project]/components/TableauLieux.jsx",
-                lineNumber: 59,
+                lineNumber: 337,
                 columnNumber: 14
             }, this);
         }
@@ -2439,16 +2741,24 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
             className: "text-blue-600"
         }, void 0, false, {
             fileName: "[project]/components/TableauLieux.jsx",
-            lineNumber: 62,
+            lineNumber: 340,
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDown$3e$__["ArrowDown"], {
             size: 16,
             className: "text-blue-600"
         }, void 0, false, {
             fileName: "[project]/components/TableauLieux.jsx",
-            lineNumber: 63,
+            lineNumber: 341,
             columnNumber: 9
         }, this);
+    };
+    const removeChip = (chipToRemove)=>{
+        setValidatedChips(validatedChips.filter((c)=>c !== chipToRemove));
+    };
+    const clearAll = ()=>{
+        setValidatedChips([]);
+        setCurrentInput('');
+        setShowSuggestions(false);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-white rounded-lg shadow-sm overflow-hidden",
@@ -2456,38 +2766,301 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "p-4 border-b",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex gap-4 items-center",
+                    className: "flex gap-4 items-start",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex-1 relative",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
-                                    className: "absolute left-3 top-3 text-gray-400",
-                                    size: 20
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    ref: inputRef,
+                                    className: "relative border rounded-lg focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent min-h-[42px] flex flex-wrap items-center gap-2 p-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                            className: "text-gray-400 flex-shrink-0",
+                                            size: 20
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 365,
+                                            columnNumber: 15
+                                        }, this),
+                                        chipsAnalysis.map((chip, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-sm font-medium transition-all",
+                                                style: {
+                                                    backgroundColor: chip.color,
+                                                    color: chip.type === 'unknown' ? '#9CA3AF' : '#202020',
+                                                    border: chip.type === 'unknown' ? '1px dashed #D1D5DB' : 'none'
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        children: chip.word
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/TableauLieux.jsx",
+                                                        lineNumber: 378,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        onClick: ()=>removeChip(chip.word),
+                                                        className: "hover:opacity-70 transition-opacity",
+                                                        "aria-label": `Retirer ${chip.word}`,
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                                            size: 14
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/TableauLieux.jsx",
+                                                            lineNumber: 384,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/TableauLieux.jsx",
+                                                        lineNumber: 379,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, index, true, {
+                                                fileName: "[project]/components/TableauLieux.jsx",
+                                                lineNumber: 369,
+                                                columnNumber: 17
+                                            }, this)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            type: "text",
+                                            value: currentInput,
+                                            onChange: (e)=>setCurrentInput(e.target.value),
+                                            onKeyDown: handleKeyDown,
+                                            className: "flex-1 min-w-[120px] outline-none bg-transparent",
+                                            placeholder: chipsAnalysis.length === 0 ? "Rechercher par nom, type ou ville..." : ""
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 390,
+                                            columnNumber: 15
+                                        }, this),
+                                        (validatedChips.length > 0 || currentInput) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: clearAll,
+                                            className: "text-gray-400 hover:text-gray-600 flex-shrink-0",
+                                            "aria-label": "Tout effacer",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                                size: 20
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/TableauLieux.jsx",
+                                                lineNumber: 405,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 400,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/components/TableauLieux.jsx",
-                                    lineNumber: 72,
+                                    lineNumber: 361,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                    type: "text",
-                                    value: searchTerm,
-                                    onChange: (e)=>setSearchTerm(e.target.value),
-                                    className: "w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                                    placeholder: "Que recherchez-vous..?"
+                                showSuggestions && suggestions.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    ref: suggestionsRef,
+                                    className: "absolute z-10 w-full mt-1 bg-white border rounded-lg shadow-lg max-h-64 overflow-y-auto",
+                                    children: suggestions.map((suggestion, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>validateChip(suggestion.value),
+                                            className: `
+                      w-full text-left px-4 py-2 hover:bg-gray-50 transition-colors flex items-center gap-2
+                      ${index === selectedSuggestionIndex ? 'bg-blue-50' : ''}
+                    `,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "w-3 h-3 rounded-full flex-shrink-0",
+                                                    style: {
+                                                        backgroundColor: suggestion.color
+                                                    }
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 425,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "flex-1",
+                                                    children: suggestion.value
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 429,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-xs text-gray-400 capitalize",
+                                                    children: suggestion.type
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 430,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, index, true, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 417,
+                                            columnNumber: 19
+                                        }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/TableauLieux.jsx",
-                                    lineNumber: 73,
-                                    columnNumber: 13
+                                    lineNumber: 412,
+                                    columnNumber: 15
+                                }, this),
+                                (validatedChips.length > 0 || currentInput) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-2 space-y-1",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex flex-wrap gap-3 text-xs text-gray-500",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "flex items-center gap-1",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "inline-block w-3 h-3 rounded-full",
+                                                            style: {
+                                                                backgroundColor: '#60A5FA'
+                                                            }
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/TableauLieux.jsx",
+                                                            lineNumber: 441,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        "Ville"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 440,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "flex items-center gap-1",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "inline-block w-3 h-3 rounded-full bg-purple-400"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/TableauLieux.jsx",
+                                                            lineNumber: 445,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        "Type"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 444,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "flex items-center gap-1",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "inline-block w-3 h-3 rounded-full",
+                                                            style: {
+                                                                backgroundColor: '#34D399'
+                                                            }
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/TableauLieux.jsx",
+                                                            lineNumber: 449,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        "Nom"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 448,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "flex items-center gap-1",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "inline-block w-3 h-3 rounded-full border border-dashed border-gray-400",
+                                                            style: {
+                                                                backgroundColor: '#E5E7EB'
+                                                            }
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/TableauLieux.jsx",
+                                                            lineNumber: 453,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        "Non trouvé"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 452,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 439,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-xs text-gray-500",
+                                            children: [
+                                                "💡 ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("kbd", {
+                                                    className: "px-1 py-0.5 bg-gray-100 border rounded text-xs",
+                                                    children: "Tab"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 458,
+                                                    columnNumber: 22
+                                                }, this),
+                                                " ou ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("kbd", {
+                                                    className: "px-1 py-0.5 bg-gray-100 border rounded text-xs",
+                                                    children: "↵"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 458,
+                                                    columnNumber: 99
+                                                }, this),
+                                                " pour valider • ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("kbd", {
+                                                    className: "px-1 py-0.5 bg-gray-100 border rounded text-xs",
+                                                    children: "↑↓"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/TableauLieux.jsx",
+                                                    lineNumber: 458,
+                                                    columnNumber: 186
+                                                }, this),
+                                                " pour naviguer"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 457,
+                                            columnNumber: 17
+                                        }, this),
+                                        isIncompletePrefix(currentInput.trim()) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-xs text-blue-600",
+                                            children: [
+                                                'ℹ️ Continuez à taper pour compléter "',
+                                                currentInput.trim(),
+                                                '"'
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 461,
+                                            columnNumber: 19
+                                        }, this),
+                                        chipsAnalysis.some((c)=>c.type === 'unknown') && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-xs text-orange-600",
+                                            children: "⚠️ Certains termes ne correspondent à aucun résultat"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/TableauLieux.jsx",
+                                            lineNumber: 466,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/TableauLieux.jsx",
+                                    lineNumber: 438,
+                                    columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/TableauLieux.jsx",
-                            lineNumber: 71,
+                            lineNumber: 359,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-sm text-gray-500",
+                            className: "text-sm text-gray-500 whitespace-nowrap pt-2",
                             children: [
                                 lieuxTries.length,
                                 " lieu",
@@ -2498,18 +3071,18 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/TableauLieux.jsx",
-                            lineNumber: 81,
+                            lineNumber: 474,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/TableauLieux.jsx",
-                    lineNumber: 70,
+                    lineNumber: 358,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/TableauLieux.jsx",
-                lineNumber: 69,
+                lineNumber: 357,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2532,12 +3105,12 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TableauLieux.jsx",
-                                            lineNumber: 97,
+                                            lineNumber: 490,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/TableauLieux.jsx",
-                                        lineNumber: 93,
+                                        lineNumber: 486,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2551,12 +3124,12 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TableauLieux.jsx",
-                                            lineNumber: 106,
+                                            lineNumber: 499,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/TableauLieux.jsx",
-                                        lineNumber: 102,
+                                        lineNumber: 495,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2570,12 +3143,12 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TableauLieux.jsx",
-                                            lineNumber: 115,
+                                            lineNumber: 508,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/TableauLieux.jsx",
-                                        lineNumber: 111,
+                                        lineNumber: 504,
                                         columnNumber: 15
                                     }, this),
                                     isAdmin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2583,18 +3156,18 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                         children: "Actions"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TableauLieux.jsx",
-                                        lineNumber: 121,
+                                        lineNumber: 514,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TableauLieux.jsx",
-                                lineNumber: 92,
+                                lineNumber: 485,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/TableauLieux.jsx",
-                            lineNumber: 91,
+                            lineNumber: 484,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2605,12 +3178,12 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                     children: lieux.length === 0 ? 'Aucun lieu dans la base de données.' : 'Aucun résultat ne correspond à vos filtres.'
                                 }, void 0, false, {
                                     fileName: "[project]/components/TableauLieux.jsx",
-                                    lineNumber: 128,
+                                    lineNumber: 521,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/TableauLieux.jsx",
-                                lineNumber: 127,
+                                lineNumber: 520,
                                 columnNumber: 15
                             }, this) : lieuxTries.map((lieu)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                     className: "border-b hover:bg-gray-50",
@@ -2626,7 +3199,7 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                                         size: 20
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TableauLieux.jsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 535,
                                                         columnNumber: 23
                                                     }, this),
                                                     lieu.nom,
@@ -2635,18 +3208,18 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                                         children: "NOUVEAU"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TableauLieux.jsx",
-                                                        lineNumber: 145,
+                                                        lineNumber: 538,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/TableauLieux.jsx",
-                                                lineNumber: 141,
+                                                lineNumber: 534,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/TableauLieux.jsx",
-                                            lineNumber: 137,
+                                            lineNumber: 530,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2662,17 +3235,17 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                                         children: type
                                                     }, type, false, {
                                                         fileName: "[project]/components/TableauLieux.jsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 547,
                                                         columnNumber: 25
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TableauLieux.jsx",
-                                                lineNumber: 152,
+                                                lineNumber: 545,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/TableauLieux.jsx",
-                                            lineNumber: 151,
+                                            lineNumber: 544,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2680,7 +3253,7 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                             children: lieu.ville
                                         }, void 0, false, {
                                             fileName: "[project]/components/TableauLieux.jsx",
-                                            lineNumber: 167,
+                                            lineNumber: 560,
                                             columnNumber: 19
                                         }, this),
                                         isAdmin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2694,7 +3267,7 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                                         children: "Modifier"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TableauLieux.jsx",
-                                                        lineNumber: 171,
+                                                        lineNumber: 564,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2703,46 +3276,46 @@ function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDe
                                                         children: "Supprimer"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TableauLieux.jsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 570,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/TableauLieux.jsx",
-                                                lineNumber: 170,
+                                                lineNumber: 563,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/TableauLieux.jsx",
-                                            lineNumber: 169,
+                                            lineNumber: 562,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, lieu.id, true, {
                                     fileName: "[project]/components/TableauLieux.jsx",
-                                    lineNumber: 136,
+                                    lineNumber: 529,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/TableauLieux.jsx",
-                            lineNumber: 125,
+                            lineNumber: 518,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/TableauLieux.jsx",
-                    lineNumber: 90,
+                    lineNumber: 483,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/TableauLieux.jsx",
-                lineNumber: 89,
+                lineNumber: 482,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/TableauLieux.jsx",
-        lineNumber: 67,
+        lineNumber: 355,
         columnNumber: 5
     }, this);
 }

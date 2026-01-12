@@ -1,50 +1,92 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { Search, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react'
+import { ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react'
 import BoutonFavori from './BoutonFavori'
+import SearchBarLieux from './SearchBarLieux'
 import { getColorForType } from '@/utils/utils'
 import { isNew } from '@/utils/helper'
 
-export default function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmin, onEdit, onDelete }) {
-  const [searchTerm, setSearchTerm] = useState('')
+export default function TableauLieux({ 
+  lieux, 
+  filtresActifs, 
+  setFiltresActifs, // ✨ Ajout de setFiltresActifs
+  onLieuClick, 
+  isAdmin, 
+  onEdit, 
+  onDelete 
+}) {
+  const [validatedChips, setValidatedChips] = useState([])
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' })
+
+  // ✨ Fonction pour ajouter un filtre (chip + filtre actif)
+  const handleTypeClick = (type) => {
+    // Ajouter dans les chips de recherche si pas déjà présent
+    if (!validatedChips.includes(type)) {
+      setValidatedChips([...validatedChips, type])
+    }
+    
+  }
+
+  // ✨ Fonction pour ajouter un filtre ville
+  const handleVilleClick = (ville) => {
+    // Ajouter dans les chips de recherche si pas déjà présent
+    if (!validatedChips.includes(ville)) {
+      setValidatedChips([...validatedChips, ville])
+    }
+    
+  }
 
   // Filtrer les lieux
   const lieuxFiltres = useMemo(() => {
     return lieux.filter(lieu => {
-      const matchSearch = lieu.nom.toLowerCase().includes(searchTerm.toLowerCase())
+      // Filtrage par recherche (chips)
+      if (validatedChips.length > 0) {
+        const matchSearch = validatedChips.every(word => {
+          const wordLower = word.toLowerCase()
+          return lieu.nom.toLowerCase().includes(wordLower) ||
+            lieu.types.some(type => type.toLowerCase().includes(wordLower)) ||
+            lieu.ville.toLowerCase().includes(wordLower)
+        })
+        if (!matchSearch) return false
+      }
+
+      // Filtrage par filtres actifs
       const matchTypes = filtresActifs.types.length === 0 || 
         filtresActifs.types.some(t => lieu.types.includes(t))
       const matchVilles = filtresActifs.villes.length === 0 || 
         filtresActifs.villes.includes(lieu.ville)
-      return matchSearch && matchTypes && matchVilles
+      
+      return matchTypes && matchVilles
     })
-  }, [lieux, searchTerm, filtresActifs])
+  }, [lieux, validatedChips, filtresActifs])
 
   // Trier les lieux
-  const lieuxTries = useMemo(() => {
-    if (!sortConfig.key) return lieuxFiltres
+const lieuxTries = useMemo(() => {
+  if (!sortConfig.key) return lieuxFiltres
 
-    return [...lieuxFiltres].sort((a, b) => {
-      let aValue, bValue
-      
-      if (sortConfig.key === 'nom') {
-        aValue = a.nom
-        bValue = b.nom
-      } else if (sortConfig.key === 'types') {
-        aValue = a.types.join(', ')
-        bValue = b.types.join(', ')
-      } else if (sortConfig.key === 'ville') {
-        aValue = a.ville
-        bValue = b.ville
-      }
-      
-      if (aValue < bValue) return sortConfig.direction === 'asc' ? -1 : 1
-      if (aValue > bValue) return sortConfig.direction === 'asc' ? 1 : -1
-      return 0
+  return [...lieuxFiltres].sort((a, b) => {
+    let aValue, bValue
+    
+    if (sortConfig.key === 'nom') {
+      aValue = a.nom
+      bValue = b.nom
+    } else if (sortConfig.key === 'types') {
+      aValue = a.types.join(', ')
+      bValue = b.types.join(', ')
+    } else if (sortConfig.key === 'ville') {
+      aValue = a.ville
+      bValue = b.ville
+    }
+    
+    // ✨ Utiliser localeCompare avec l'option pour ignorer casse et accents
+    const compareResult = aValue.localeCompare(bValue, 'fr', { 
+      sensitivity: 'base' // Ignore la casse et les accents
     })
-  }, [lieuxFiltres, sortConfig])
+    
+    return sortConfig.direction === 'asc' ? compareResult : -compareResult
+  })
+}, [lieuxFiltres, sortConfig])
 
   const handleSort = (key) => {
     let direction = 'asc'
@@ -67,18 +109,18 @@ export default function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmi
     <div className="bg-white rounded-lg shadow-sm overflow-hidden">
       {/* Barre de recherche */}
       <div className="p-4 border-b">
-        <div className="flex gap-4 items-center">
-          <div className="flex-1 relative">
-            <Search className="absolute left-3 top-3 text-gray-400" size={20} />
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Que recherchez-vous..?"
-            />
+        <div className="flex gap-4 items-start">
+          <div className="flex-1">
+<SearchBarLieux 
+  lieux={lieux}
+  validatedChips={validatedChips}
+  setValidatedChips={setValidatedChips}
+  filtresActifs={filtresActifs} // ✨ Ajouter
+  setFiltresActifs={setFiltresActifs} // ✨ Ajouter
+/>
           </div>
-          <div className="text-sm text-gray-500">
+          
+          <div className="text-sm text-gray-500 whitespace-nowrap pt-2">
             {lieuxTries.length} lieu{lieuxTries.length > 1 ? 'x' : ''} affiché{lieuxTries.length > 1 ? 's' : ''}
             {lieux.length !== lieuxTries.length && ` sur ${lieux.length} au total`}
           </div>
@@ -153,18 +195,36 @@ export default function TableauLieux({ lieux, filtresActifs, onLieuClick, isAdmi
                       {lieu.types.map((type) => (
                         <span
                           key={type}
+                          onClick={(e) => {
+                            e.stopPropagation() // ✨ Empêcher le clic de remonter
+                            handleTypeClick(type)
+                          }}
                           style={{
                             backgroundColor: getColorForType(type),
                             color: '#202020ff',
                           }}
-                          className="px-2 py-1 rounded text-sm"
+                          className="px-2 py-1 rounded text-sm cursor-pointer hover:opacity-80 hover:scale-105 transition-all"
+                          title="Cliquer pour filtrer"
                         >
                           {type}
                         </span>
                       ))}
                     </div>
                   </td>
-                  <td className="px-6 py-4">{lieu.ville}</td>
+ <td 
+  className="px-6 py-4"
+>
+  <span
+    onClick={(e) => {
+      e.stopPropagation()
+      handleVilleClick(lieu.ville)
+    }}
+    className="inline-block px-3 py-1 rounded-full text-sm border border-gray-300 cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-all"
+    title="Cliquer pour filtrer"
+  >
+    {lieu.ville}
+  </span>
+</td>
                   {isAdmin && (
                     <td className="px-6 py-4">
                       <div className="flex justify-center gap-2">

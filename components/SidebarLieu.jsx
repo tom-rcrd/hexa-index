@@ -1,15 +1,42 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import { X, Globe, Instagram, ExternalLink } from 'lucide-react'
 import BoutonFavori from './BoutonFavori'
 import { getColorForType } from '@/utils/utils'
 import { isNew } from '@/utils/helper'
 
 export default function SidebarLieu({ lieu, onClose, isAdmin, onEdit, onDelete }) {
+  const sidebarRef = useRef(null)
+
+  // ✨ Détecter les clics en dehors de la sidebar
+  useEffect(() => {
+    if (!lieu) return
+
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        onClose()
+      }
+    }
+
+    // Petit délai pour éviter que le clic qui ouvre la sidebar la ferme immédiatement
+    const timeoutId = setTimeout(() => {
+      document.addEventListener('mousedown', handleClickOutside)
+    }, 100)
+
+    return () => {
+      clearTimeout(timeoutId)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [lieu, onClose])
+
   if (!lieu) return null
 
   return (
-    <div className="fixed right-0 top-0 h-full w-[90vw] max-w-[400px] bg-white shadow-2xl z-50 overflow-y-auto animate-slide-in">
+    <div 
+      ref={sidebarRef}
+      className="fixed right-0 top-0 h-full w-[90vw] max-w-[400px] bg-white shadow-2xl z-50 overflow-y-auto animate-slide-in"
+    >
       <div className="p-6">
         <div className="flex justify-between items-start mb-6">
           <div className="flex-1 pr-4">

@@ -12,7 +12,6 @@ import SidebarEditLieu from '@/components/SidebarEditLieu'
 import BarreAdmin from '@/components/BarreAdmin'
 import FiltresLieux from '@/components/FiltresLieux'
 import TableauLieux from '@/components/TableauLieux'
-import ContributionsAdmin from '@/components/ContributionsAdmin'
 
 export default function Home() {
   // 🔐 Hooks de données
@@ -22,12 +21,16 @@ export default function Home() {
   const categoriesData = useCategories()
 
   // 🎨 États UI locaux
-  const [selectedLieu, setSelectedLieu] = useState(null)
+  const [selectedLieu, setSelectedLieu] = useState(null) // ✨ État pour le lieu sélectionné
   const [lieuToEdit, setLieuToEdit] = useState(null)
   const [showEditSidebar, setShowEditSidebar] = useState(false)
   const [filtresActifs, setFiltresActifs] = useState({ types: [], villes: [] })
 
   // 📝 Handlers
+  const handleLieuClick = (lieu) => {
+    setSelectedLieu(lieu)
+  }
+
   const handleEdit = (lieu) => {
     setLieuToEdit(lieu)
     setShowEditSidebar(true)
@@ -78,7 +81,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
           <div className="flex justify-between items-start mb-4">
             <div>
-              <h1 className="text-3xl font-bold text-gray-800">Hexa Index</h1>
+              <h1 className="text-3xl font-bold text-gray-800">Liste des lieux</h1>
               <h3 className="text-xl font-bold text-gray-800">
                 Index de ressources pour design·euse·r·s graphiques
               </h3>
@@ -100,24 +103,24 @@ export default function Home() {
           <div className="mt-4">
             <MainMenu />
           </div>
+
+          {/* Filtres */}
+          <div className="mt-4">
+            <FiltresLieux 
+              categories={categoriesData.categories}
+              villes={villesData.villes}
+              filtresActifs={filtresActifs}
+              setFiltresActifs={setFiltresActifs}
+            />
+          </div>
         </div>
-
-        {/* Contributions admin (encadré orange) */}
-        {auth.isAdmin && <ContributionsAdmin />}
-
-        {/* Filtres */}
-        <FiltresLieux 
-          categories={categoriesData.categories}
-          villes={villesData.villes}
-          filtresActifs={filtresActifs}
-          setFiltresActifs={setFiltresActifs}
-        />
 
         {/* Tableau des lieux */}
         <TableauLieux 
           lieux={lieuxData.lieux}
           filtresActifs={filtresActifs}
-          onLieuClick={setSelectedLieu}
+          setFiltresActifs={setFiltresActifs}
+          onLieuClick={handleLieuClick}
           isAdmin={auth.isAdmin}
           onEdit={handleEdit}
           onDelete={handleDelete}

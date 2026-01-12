@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { X, Save } from 'lucide-react'
 import { getColorForType, normalizeString } from '@/utils/utils'
 
@@ -12,6 +12,7 @@ export default function SidebarEditLieu({
   villesData, 
   categoriesData 
 }) {
+  const sidebarRef = useRef(null)
   const [formData, setFormData] = useState({
     nom: '',
     types: [],
@@ -26,6 +27,27 @@ export default function SidebarEditLieu({
   const [showVilleSuggestions, setShowVilleSuggestions] = useState(false)
   const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1)
   const [selectedVilleSuggestionIndex, setSelectedVilleSuggestionIndex] = useState(-1)
+
+  // ✨ Détecter les clics en dehors de la sidebar
+  useEffect(() => {
+    if (!show) return
+
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        handleClose()
+      }
+    }
+
+    // Petit délai pour éviter que le clic qui ouvre la sidebar la ferme immédiatement
+    const timeoutId = setTimeout(() => {
+      document.addEventListener('mousedown', handleClickOutside)
+    }, 100)
+
+    return () => {
+      clearTimeout(timeoutId)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [show])
 
   // Charger les données du lieu à éditer
   useEffect(() => {
@@ -215,7 +237,10 @@ export default function SidebarEditLieu({
   if (!show) return null
 
   return (
-    <div className="fixed right-0 top-0 h-full w-[90vw] max-w-[500px] bg-white shadow-2xl z-50 overflow-y-auto animate-slide-in">
+    <div 
+      ref={sidebarRef}
+      className="fixed right-0 top-0 h-full w-[90vw] max-w-[500px] bg-white shadow-2xl z-50 overflow-y-auto animate-slide-in"
+    >
       <div className="p-6">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">
