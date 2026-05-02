@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { Suspense, useState, useMemo } from 'react'
 import MainMenu from '@/components/MainMenu'
 import BoutonFavori from '@/components/BoutonFavori'
 import PartagerFavoris from '@/components/PartagerFavoris'
@@ -22,6 +22,14 @@ import {
 } from 'lucide-react'
 
 export default function FavorisPage() {
+  return (
+    <Suspense fallback={<div>Chargement...</div>}>
+      <FavorisContent />
+    </Suspense>
+  )
+}
+
+function FavorisContent() {
   const { 
     favoris, 
     viderFavoris, 

@@ -1,8 +1,11 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/admin/contributions/page": "/admin/contributions",
   "/carte/page": "/carte",
   "/contribuer/page": "/contribuer",
   "/favicon.ico/route": "/favicon.ico",
-  "/page": "/"
+  "/favoris/page": "/favoris",
+  "/page": "/",
+  "/random/page": "/random"
 }

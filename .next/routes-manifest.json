@@ -1,6 +1,7 @@
 {
   "version": 3,
   "pages404": true,
+  "appType": "app",
   "caseSensitive": false,
   "basePath": "",
   "redirects": [
@@ -14,6 +15,7 @@
     }
   ],
   "headers": [],
+  "onMatchHeaders": [],
   "rewrites": {
     "beforeFiles": [],
     "afterFiles": [],
@@ -40,6 +42,12 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/admin/contributions",
+      "regex": "^/admin/contributions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/contributions(?:/)?$"
+    },
+    {
       "page": "/carte",
       "regex": "^/carte(?:/)?$",
       "routeKeys": {},
@@ -56,6 +64,18 @@
       "regex": "^/favicon\\.ico(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/favoris",
+      "regex": "^/favoris(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favoris(?:/)?$"
+    },
+    {
+      "page": "/random",
+      "regex": "^/random(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/random(?:/)?$"
     }
   ],
   "dataRoutes": [],
@@ -66,7 +86,6 @@
     "didPostponeHeader": "x-nextjs-postponed",
     "contentTypeHeader": "text/x-component",
     "suffix": ".rsc",
-    "prefetchSuffix": ".prefetch.rsc",
     "prefetchSegmentHeader": "next-router-segment-prefetch",
     "prefetchSegmentSuffix": ".segment.rsc",
     "prefetchSegmentDirSuffix": ".segments",
